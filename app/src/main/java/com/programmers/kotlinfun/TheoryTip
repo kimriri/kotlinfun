@@ -1,0 +1,56 @@
+안드로이드 예제로 이해하는 코틀린
+코트린 안드롤이드 프로그래밍
+
+
+1, 클래스의 작동 118p ~ 119p
+    fun(function)을 다룰때 return 이 있는 경우 여러개의 return 을 여러개 사용 하는 것 보다
+    하나의 return 만 사용 하는게 저자의 경험상 좋다.
+
+    연습 문제 7
+
+    다음은 참인가 ?
+
+    fun printOut(d:Double) {
+        println(d)
+    }
+
+    정답: 참
+
+     연습 문제 8
+
+    다음 클래스를 짧게 만들길 바란다.
+
+    class A(val a:Int){
+    fun add(b:Int):Int {
+        return a + b
+    }
+
+    fun mult(b:Int):Int {
+        return a * b
+    }
+    }
+
+    정답
+
+        class A(val a:Int){
+        fun add(b:Int) = a + b
+        fun mult(b:Int) = a * b
+        }
+
+       참조 : 표현식은 변종을 사용한다.
+
+       연습문제 9
+
+       연습문제 8의 크래스 A의 모든 것을 기술하는 AInterface 인터페이스를 만들길 바란다.
+
+       정답
+
+       interface AInterface {
+               fun add(b:Int):Int
+               fun mult(b:Int):Int
+       }
+       
+
+
+
+
