@@ -49,7 +49,29 @@
                fun add(b:Int):Int
                fun mult(b:Int):Int
        }
-       
+
+       연습문제 10
+
+       다음의 출력 결과물은 ?
+
+       class A {
+         val xyz:Int = 7
+         fun meth1(xyz:Int): String {
+          return "meth1:" + xyz" +
+                    " " + this.xyz
+         }
+         // "meth1:" " + xyz" + " " + this.syz 에서 xyz는 매개 변수 xyz 를 this.xyz는 프로퍼티 xyz 를 뜻한다.
+
+         fun main(args:Array<String>) {
+            val a= A()
+            println(a.meth1(42))
+
+         // 따라서 출력은 meth1 42(매개변수 xyz) + 7(프로퍼티 xyz) 가 된다.
+         
+
+         }
+
+       }
 
 
 
