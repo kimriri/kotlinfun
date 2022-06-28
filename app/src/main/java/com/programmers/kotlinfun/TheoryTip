@@ -67,11 +67,29 @@
             println(a.meth1(42))
 
          // 따라서 출력은 meth1 42(매개변수 xyz) + 7(프로퍼티 xyz) 가 된다.
-         
-
          }
-
        }
+
+       연습문제 11
+
+       class A {
+         companion object {
+            fun x(a:Int): Int {
+            return a + 7
+            }
+         }
+       }
+
+  다음의 클래스가 있을때 이러한 클래스 외부의 print() 함수에서 42를 매개변수로 해 x() 함수에 접근하려면 어떻게 해야 하는가?
+
+  정답 : printin(A.x(42))
+
+  동반자 객체를 사용 할 경우 class의 instance는 필요 없다.
+
+  동반자 객체는 ?  -> companion object
+
+
+
 
 
 
