@@ -105,6 +105,27 @@
     p.setName(fName = "Joho", lName = "Doe")
 
 
+  연습문제 13
+
+   fun set(lastName: String, firstName: String, birthDay?: String, ssn?:String)
+   { ... }
+
+    다음 함수 선언에 lastName = "", firstName = "", birthDay = null, ssn = null을 기본값으로 주길 바란다.
+    그런 다음여된 매개변수를 사용해 lastName = "Smith"와 ssn = "1234567890"만 저장해 함수를 호출하길 바란다.
+
+      정답
+       fun set(lastName: String = "",
+        firstName: String = "",
+        birthDay?: String = null, ssn:String? = null)
+       {
+        set(lastName = "Smith", ssn = "1234567890")
+        }
+        기본값이 존재 하기떄문에 birthDay와 ssn는 null 을 반환한다.
+
+        
+
+
+
 
 
 
