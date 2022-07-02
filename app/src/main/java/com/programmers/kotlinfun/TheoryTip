@@ -122,11 +122,28 @@
         }
         기본값이 존재 하기떄문에 birthDay와 ssn는 null 을 반환한다.
 
-        
+    연습문제 14
 
+    Club 클래스를 만들고 하나의 vararg 매개변수 name를 갖는 addMembers 함수를 추가하길 바란다.
+    함수 내부에서 다음 코드를 사용해 매개변수를 출력하길 바란다.
 
+    print ("Number: " + names.size)
+    print (names.joinToString(" : "))
 
+    class Club {
+        fun addMembers(vararg names:String) {
 
+            println ("Number: " + names.size)
+            println (names.joinToString(" : "))
+        }
+    }
+
+    fun main(args:Array<String>) {
+    var club = Club()
+    club.addMembers("Hughes, John",
+                    "Smith, Alina",
+                    "Curtis, Solenge")
+    }
 
 
 
