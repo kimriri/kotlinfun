@@ -147,4 +147,37 @@
 
 
 
+    연습문제 15
+
+    다음의 출력은 무엇일까?
+
+    open class A(open val a:Int) {
+        fun x() {
+          Log.d("LOG",
+                "A,x() -> a = ${a}")
+        }
+        fun q() {
+            Log.d("LOG",
+                  "A.q() -> a = ${a}")
+        }
+    }
+
+    class B(override val a:Int) : A(37) {
+        fun y() {
+            Log.d("LOG",
+                  "B.y() -> a = ${a}")
+                  q()
+        }
+    }
+
+    // 어떠한 액티비티 함수 내부
+
+       val b = B(7)
+       b.y()
+
+
+
+    정답 : b.y() -> a = 7
+          A.q() -> a = 7
+
 
