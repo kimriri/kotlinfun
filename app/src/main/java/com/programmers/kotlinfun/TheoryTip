@@ -164,7 +164,7 @@
 
     class B(override val a:Int) : A(37) {
         fun y() {
-            Log.d("LOG",
+            Log.d("LOG",12
                   "B.y() -> a = ${a}")
                   q()
         }
@@ -179,5 +179,42 @@
 
     정답 : b.y() -> a = 7
           A.q() -> a = 7
+
+
+
+    연습문제 16
+
+    다음의 출력은 무엇인가?
+
+    open class A() {
+        provate var g:Int = 99
+        fun x() {
+            Log.d("LOG","A.x() : g = ${g}")
+            }
+
+            fun q() {
+                Log.d("LOG","A.q() : g = ${g}")
+            }
+        }
+
+
+        class B : A() {
+            var g:Int = 8
+            fun y() {
+                Log.d("LOG","B.y() : g=${g}")
+                q()
+            }
+        }
+
+    // 어떠한 액티비티 함수 내부
+
+      val b = B()
+      b.x()
+      b.y()
+      
+    정답
+    A.x() -> g = 99
+    B.y() -> g = 8
+    A.q() -> g = 99
 
 
