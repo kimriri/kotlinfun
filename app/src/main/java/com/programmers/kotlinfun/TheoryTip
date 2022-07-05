@@ -211,10 +211,63 @@
       val b = B()
       b.x()
       b.y()
-      
+
     정답
     A.x() -> g = 99
     B.y() -> g = 8
     A.q() -> g = 99
 
+
+    연습 문제 18
+
+    다음 클래스 중 유효한 클래스느 무엇일까? 유효하지 않은 클래스가 있다면 문제점을 설명 해보길 바란다.
+
+    1,
+
+    class TheClass {
+
+    var a: Int = 7
+    fun function() {
+        val a = 7
+    }
+   }
+
+  2,
+
+  class TheClass {
+    fun function(a:String) {
+        val a = 7
+    }
+  }
+
+  3,
+
+  class TheClass {
+    fun function() {
+         print(a)
+         val a = 7
+    }
+  }
+
+  4, class The Class {
+    fun function():Int {
+        val a = 7
+        return a - 1
+    }
+  }
+
+  5, class TheClass {
+    fun function() : Int {
+        val a = 7
+        return a - 1
+    }
+  }
+  fun function2():Int {
+        a = 8
+        return a - 1
+
+  }
+
+  3번은 로컬 변수 val a = 7 이 선언 되기 전에 print(a) 가 호출 되었기 떄문에 사용 print(a)에서 a 는 선언되지 않았다.
+  5번dml val a = 7 는 function()의 지역 변수 로 function2()에서 사용 할 수 없다.
 
