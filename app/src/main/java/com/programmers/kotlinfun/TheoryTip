@@ -269,5 +269,23 @@
   }
 
   3번은 로컬 변수 val a = 7 이 선언 되기 전에 print(a) 가 호출 되었기 떄문에 사용 print(a)에서 a 는 선언되지 않았다.
-  5번dml val a = 7 는 function()의 지역 변수 로 function2()에서 사용 할 수 없다.
+  5번은 val a = 7 는 function()의 지역 변수 로 function2()에서 사용 할 수 없다.
+
+
+  연습문제 19
+
+  다음과 같이 작성하면 어떻게 될까?
+
+  class Line(val x1:Double, val y1:Double,
+             val x2:Double, val y2:Double) {
+
+                override fun toString() = toString() +
+                    "(${x1},${y1}) -> (${x2},${y2})"
+             }
+
+
+             메서드가 계속해서 자기자신을 호출하여 무한루프 상태가 된다.
+             이를 재귀라고 부르며 오류가 발생한다.
+
+
 
