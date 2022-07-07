@@ -289,3 +289,51 @@
 
 
 
+
+
+
+
+   연습 문제 1
+
+   다음과 같은 싱글턴 객체와
+
+   package com.example.util
+
+   object Util {
+    fun add10(a:Int) = a + 10
+    fun add100(a:Int) = a + 100
+   }
+
+
+   다음과 같은 클라이언트가 있을 때
+
+   package com.example
+
+   import com.example.util/Util
+
+   class A(q:Int) {
+        val x10:Int = Util.add10(q)
+        val x100:Int = Util.add100(q)
+   }
+
+    object{ } 선언을 사용하지 않고 Util.kt를 재작성하는 방법을 생각해보길 바란다.
+    클라이언트 코드는 어떻게 바뀔까 ?
+
+
+    package com.example.Util
+
+    fun add10(a:Int) = a + 10
+    fun add100(a:Int) = a + 100
+
+
+   클라이언트
+
+   package com.example
+
+   import com.example.util.*
+
+   class A(q:Int) {
+      val x10:Int = add10(q)
+      val x100:Int = add100(q)
+   }
+
