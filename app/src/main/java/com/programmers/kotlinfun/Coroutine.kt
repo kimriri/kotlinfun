@@ -29,6 +29,17 @@ class Coroutine : AppCompatActivity() {
                 ,"${deferred.await() + deferred2.await()}")
         }
 
+        suspend fun subRoutine() {
+            for (i in 0..10) {
+                Log.d("subRoutine", "$i")
+            }
+        }
 
+        CoroutineScope(Dispatchers.Main).launch {
+            subRoutine()
+        }
     }
+
+
+
 }
