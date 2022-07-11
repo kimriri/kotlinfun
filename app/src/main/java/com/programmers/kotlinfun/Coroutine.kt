@@ -34,11 +34,27 @@ class Coroutine : AppCompatActivity() {
                 Log.d("subRoutine", "$i")
             }
         }
-
         CoroutineScope(Dispatchers.Main).launch {
             subRoutine()
         }
+
+        CoroutineScope(Dispatchers.Default).launch {
+           launch {
+               for (i in 0..5){
+                   delay(500)
+                   Log.d("Coroutine","$i")
+               }
+           }.join()
+
+            launch {
+                for (i in 6..10){
+                    delay(500)
+                    Log.d("COROUTINE","$i")
+                }
+            }
+        }
     }
+
 
 
 
