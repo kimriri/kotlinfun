@@ -7,6 +7,9 @@ import androidx.core.view.WindowCompat
 import androidx.navigation.ui.AppBarConfiguration
 import com.programmers.kotlinfun.databinding.ActivityMainBinding
 import kotlinx.coroutines.*
+import kotlinx.coroutines.Dispatchers.Default
+import kotlinx.coroutines.Dispatchers.IO
+import kotlinx.coroutines.Dispatchers.Main
 
 class Coroutine : AppCompatActivity() {
 
@@ -53,7 +56,21 @@ class Coroutine : AppCompatActivity() {
                 }
             }
         }
+         // CoroutineScope 의 형태
+        CoroutineScope(Main).launch {
+            // do something
+        }
+
+        CoroutineScope(IO).launch {
+            // do something
+        }
+
+        CoroutineScope(Default).launch {
+            // do something
+        }
     }
+
+
 
 
 
